@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FLEXBOX LOGIN</title>
+    <link
+      rel="stylesheet"
+      href="https://netdna.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.css"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="brand">Login Now</div>
+
+      <div class="main-box">
+        <p id="info" style="text-align: center;"></p>
+        <form method="post" class="form form-login">
+          <div class="input-group">
+            <label class="user" for="username"></label>
+            <input
+              id="username"
+              type="text"
+              class="form-input"
+              placeholder="Username"
+            />
+          </div>
+
+          <div class="input-group">
+            <label class="lock" for="password"></label>
+            <input
+              id="password"
+              type="password"
+              class="form-input"
+              placeholder="Password"
+            />
+          </div>
+
+          <div class="input-group">
+            <input type="submit" id="submit" value="Log in" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script>
+    const info = document.getElementById("info");
+    const username = document.getElementById("username");
+    const password = document.getElementById("password");
+    const submitBtn = document.getElementById("submit");
+    submitBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (username.value.trim().length > 0) {
+        if (password.value.trim().length > 0) {
+          // success info
+          info.style.color = "lightgreen";
+          info.innerHTML = `Welcome ${username.value}`;
+        } else {
+          info.style.color = "gold";
+          info.innerHTML = "Password is required!";
+        }
+      } else {
+        info.style.color = "gold";
+        info.innerHTML = "Username is required!";
+      }
+    });
+  </script>
+</html>
