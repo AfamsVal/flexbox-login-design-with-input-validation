@@ -1,6 +1,6 @@
 ## FLEXBOX LOGIN DESIGN WITH INPUT VALIDATION
 
-> This is special login design using with email and password validation.
+> This is a special login design using flexbox with email and password validation.
 
 ## Quick Start
 
